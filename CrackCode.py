@@ -8,7 +8,6 @@ from selenium.webdriver import ActionChains
 
 from config import *
 from PIL import Image
-from io import BytesIO
 import time
 from bs4 import BeautifulSoup
 import requests
@@ -43,15 +42,6 @@ class CrackBiliBili():
         slider = self.wait.until(
             EC.element_to_be_clickable((By.CLASS_NAME, 'gt_slider_knob')))
         return slider
-
-    def get_screenshot(self):
-        """
-        获取网页截图
-        :return: 截图对象
-        """
-        screenshot = self.browser.get_screenshot_as_png()
-        screenshot = Image.open(BytesIO(screenshot))
-        return screenshot
 
     def get_bg_position(self):
         """
