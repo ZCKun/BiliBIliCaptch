@@ -243,8 +243,6 @@ def main():
 
     slider = cbb.get_slider_button()
     slider.click()
-    s = cbb.get_screenshot()
-    # s.show()
 
     # 完整验证码图
     fbg_pos = cbb.get_fullbg_position()
@@ -270,7 +268,7 @@ def main():
 
     # 拖动滑块
     slider.click()
-    time.sleep(10) # 等待几秒避免验证失败
+    time.sleep(6) # 等待几秒避免验证失败
     cbb.move_to_gap(slider, track)
 
 
